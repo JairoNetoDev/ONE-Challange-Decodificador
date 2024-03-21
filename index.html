@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+    <title>Encripitador</title>
+  </head>
+  <body>
+    <main class="containerMain">
+      <section class="containerContent">
+        <header class="mainHeader">
+          <img src="./assets/logo.svg" alt="Logo Encripitador" />
+        </header>
+        <div class="containerInput">
+          <textarea
+            name="inputText"
+            id="inputText"
+            placeholder="Digite seu texto"
+            class="inputText"
+            wrap="soft"
+            autocomplete="off"
+            rows="10"
+          ></textarea>
+          <!-- Show when the input is upper case or acentuation. -->
+          <span class="errorMessage" id="errorMessage"
+            ><img src="./assets/Vector.svg" alt="Icon interrogation" />Apenas
+            letras minúsculas e sem acentuação</span
+          >
+        </div>
+        <div class="container__buttons">
+          <!-- replaceAll() for encript the input text -->
+          <button
+            type="button"
+            class="btn btnCript"
+            id="btnEncript"
+            onclick="encriptText()"
+          >
+            Criptografar
+          </button>
+          <!-- replaceAll() for encript the input text -->
+          <button
+            type="button"
+            class="btn btnDescript"
+            id="btnDescript"
+            onclick="desencriptText()"
+          >
+            Descriptografar
+          </button>
+        </div>
+      </section>
+
+      <section class="containerOutput">
+        <div class="cardOutput" id="cardOutput">
+          <img
+            src="./assets/High quality products 1 1.svg"
+            alt=""
+            id="imageNoTextOutput"
+          />
+          <span class="noTextOutput" id="noTextOutput">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <br />
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </span>
+          <textarea
+            class="outputText"
+            id="outputText"
+            rows="10"
+            readonly
+          ></textarea>
+          <button class="btn btnCopy" id="btnCopy" onclick="clipBoard()">
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="mainFooter">
+      &copy;Desenvolvido por Jairo Williams Guedes Lopes Neto
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
