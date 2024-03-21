@@ -15,7 +15,7 @@ const charEncript = {
 };
 
 function verifyInput(text) {
-  const regex = /^[a-z\s!;?.,@]+$/;
+  const regex = /^[a-z\s!;?.,@""]+$/;
   const isValid = regex.test(text);
   if (!isValid) {
     return false;
